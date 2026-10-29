@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeBuddy | Computer Languages Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">&lt;/&gt;</div><div><strong>CodeBuddy</strong><span>LEARN • CODE • GROW</span></div></div>
+      <div class="side-label">LEARNING AREAS</div>
+      <button class="topic-button" data-question="What is Python?"><span>🐍</span> Python</button>
+      <button class="topic-button" data-question="Explain HTML and CSS"><span>🌐</span> HTML & CSS</button>
+      <button class="topic-button" data-question="What is JavaScript?"><span>⚡</span> JavaScript</button>
+      <button class="topic-button" data-question="What is SQL?"><span>🗄️</span> SQL & Databases</button>
+      <button class="topic-button" data-question="Explain computer basics"><span>💻</span> Computer Basics</button>
+      <button class="topic-button" data-question="What is AI and machine learning?"><span>🤖</span> AI & Machine Learning</button>
+      <div class="sidebar-note"><strong>Beginner friendly</strong><p>Ask in Marathi, English, or Marathi-English about coding and computers.</p></div>
+      <div class="sidebar-footer">Made for curious learners ✨</div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand">CodeBuddy <span>AI-style learning assistant</span></div>
+        <div class="status"><i></i> Learning assistant <span class="divider">•</span> Online locally</div>
+        <button id="clearButton" class="clear-button" title="Clear chat">↻ <span>New chat</span></button>
+      </header>
+
+      <section id="chatMessages" class="chat-messages" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb">⌘</div>
+          <p class="eyebrow">YOUR COMPUTER LEARNING COMPANION</p>
+          <h1>Hey there, <span>future developer.</span></h1>
+          <p class="welcome-copy">Marathi, English किंवा Marathi-English मध्ये programming languages, coding basics आणि computer concepts शिका.</p>
+          <div class="suggestion-grid">
+            <button class="suggestion" data-question="What is a programming language?"><span>📚</span><strong>Programming basics</strong><small>Start with the fundamentals</small><b>↗</b></button>
+            <button class="suggestion" data-question="What is Python?"><span>🐍</span><strong>Learn Python</strong><small>Explore a beginner-friendly language</small><b>↗</b></button>
+            <button class="suggestion" data-question="Explain frontend and backend"><span>🧩</span><strong>Web development</strong><small>Frontend vs backend</small><b>↗</b></button>
+            <button class="suggestion" data-question="Give me beginner coding project ideas"><span>🚀</span><strong>Project ideas</strong><small>Turn knowledge into practice</small><b>↗</b></button>
+          </div>
+        </div>
+      </section>
+
+      <div class="composer-wrap">
+        <form id="chatForm" class="composer">
+          <textarea id="messageInput" rows="1" placeholder="Marathi / English: Python mhanje kay? / What is Python?" aria-label="Your question"></textarea>
+          <button id="sendButton" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <p class="disclaimer">CodeBuddy is a learning starter bot. Answers are prepared examples, so verify important details.</p>
+      </div>
+    </main>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
